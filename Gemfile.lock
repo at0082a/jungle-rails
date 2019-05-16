@@ -204,7 +204,7 @@ DEPENDENCIES
   jquery-rails
   money-rails
   newrelic_rpm
-  pg (= 1.1.4)
+  pg
   puma
   quiet_assets
   rails (= 4.2.6)
@@ -222,4 +222,4 @@ RUBY VERSION
    ruby 2.3.5p376
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
