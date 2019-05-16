@@ -1,0 +1,6 @@
+<h2>Create a new Category</h2>
+
+<%= form_for @category, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create" %>
+<% end %>
