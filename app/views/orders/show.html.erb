@@ -6,6 +6,8 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <%= render @line_items %>
+    <h5> Order Total $ <%=  @order.total_cents %> </h5>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
