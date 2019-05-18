@@ -31,9 +31,16 @@
         <dt>Description</dt>
         <dd><%= review.description %></dd>
         <dt>Rating</dt>
-        <dd><%= review.rating %>/10</dd>
+        <dd><%= review.rating %>/5</dd>
       <% end %> 
     </div>
+
+    <div>
+    <%= form_for [@product, @review] do |f| %>
+      Rating: <%= f.select :rating, [ '1', '2', '3', '4', '5' ], :prompt => 'Select One' %>
+      Description: <%= f.text_field :description %>
+      <%= f.submit "Submit" %>
+    <% end %>
 
   </article>
 
