@@ -132,5 +132,23 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+puts "Finding or Creating REVIEWS ..."  
 
-puts "DONE!"
+user1 = User.find_or_create_by! ({name: 'Bob Cobb', email:'bob@gmail.com', password_digest: '123'})
+user2 = User.find_or_create_by! ({name: 'Bob Hobb', email:'hob@gmail.com', password_digest: '123'})
+
+Review.destroy_all
+
+Product.first.reviews.create!({
+ user_id: user1.id,
+ product_id: 1,
+ description: 'This is the best shirt ever! Great Quality',
+ rating: 5
+})
+
+Product.second.reviews.create!({
+ user_id: user2.id,
+ product_id: 2,
+ description: 'This is the best shirt ever! Great Quality',
+ rating: 5
+})
