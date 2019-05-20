@@ -152,3 +152,10 @@ Product.second.reviews.create!({
  description: 'This is the best shirt ever! Great Quality',
  rating: 5
 })
+
+Product.first.reviews.create!({
+ user_id: user1.id,
+ product_id: 1,
+ description: 'i take back what i said. this shirt dissintegrated in 2 weeks',
+ rating: 1
+})
